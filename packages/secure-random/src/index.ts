@@ -1,5 +1,5 @@
 const createNodeRandom = (min = 0, max = 1) => {
-    const {randomInt} = require('node:crypto') 
+    const {randomInt} = require('crypto') 
     return randomInt(Math.ceil(min), Math.floor(max))
 }
 
