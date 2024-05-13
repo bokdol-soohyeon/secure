@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {secureRandom} from '@bokdol-soohyeon/secure-random'
 
 const SecureDice = () => {
+  const [diceNumber, setDiceNumber] = useState(null)
   const rollDice = () => {
-    console.log(secureRandom({min: 1, max: 6}))
+    setDiceNumber(secureRandom({min: 1, max: 6}))
   }
 
   return (
     <div>
-      slfjsak
+      {diceNumber}
       <button onClick={rollDice}>ROLL DICE</button>
     </div>
   )
